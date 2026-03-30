@@ -127,9 +127,9 @@ class Executor:
     def expand_globs(self, tokens):
         expand = []
         for token in tokens:
-            if any(c in token for c in ('*', '?', '[')):  # ✅ any() দিয়ে
+            if any(c in token for c in ('*', '?', '[')): 
                 matches = glob.glob(os.path.expanduser(token))
-                expand.extend(sorted(matches) if matches else [token])  # ✅
+                expand.extend(sorted(matches) if matches else [token]) 
             else:
                 expand.append(token)
         return expand
