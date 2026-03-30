@@ -1,0 +1,16 @@
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm
+.idea/
+
+# Virtual environment
+venv/
+env/
